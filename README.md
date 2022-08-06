@@ -4,5 +4,5 @@
 - 🌱 I’m currently learning Machine Learning.
 - 👯 I’m looking to collaborate on Data Science Issues.
 - 💬 Ask me about Data Science.
-- 📫 How to reach me: lydra4@hotmail.com or https://www.linkedin.com/in/lydra4/
+- 📫 How to reach me: [email](lydra4@hotmail.com) or [linkedin](https://www.linkedin.com/in/lydra4/)
 - ⚡ Fun fact: I am a certified Lifeguard.
