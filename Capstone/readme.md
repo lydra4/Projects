@@ -1,35 +1,30 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 3: Web APIs & NLP
+# Capstone Project: Credit Card Fraud Detection
 
 ### Overview
 
-In our 3rd project, we are tasked with scrapping 2 subreddits and training 2 models (1 model must be Random Forest) to differentiate materials between the 2 subreddits.
+This is my last project, I will be taking on the role of the data science team in the largest bank in Singapore, DBS.
 
 ### Problem Statement
 
-We are tasked to scrap 2 subreddits and train 2 models in order to differentiate materials from the 2 subreddits.
-
----
+The COVID19 Pandemic has accelerated e-commerce usage, this is has led to a rise in Credit Card Transactions. An increase in Credit Card transactions would cause more fraud transactions being committed. Therefore, the data science team would like to come up with an improved machine learning algorithm to detect fraud.
 
 ### Datasets
 
-Below are the hyperlinks to the data gathered from the 2 subreddits:
+My dataset is in the link below. There are 2 datasets in the hyperlink, I will be using the dataset smaller in size due to physical limitations.
 
-Python: https://www.reddit.com/r/Python/
-JavaScript: https://www.reddit.com/r/javascript/ 
-
----
-
-### Data Cleaning
-
-Data cleaning for this project can be categorised into 4 broad categories. Missing Values (NaN), Emoticons, Removed posts by moderators and foreign languages.
-
-For the first 3, I have found and replaced them with a blank. Regarding the last part of data cleaning, foreign language, firstly I had to detect if the language is in English. Secondly, if the language is not English, translation to English had to be done.
-
-In all my data cleaning methods, I preserve to keep the data as much as possible.
+https://www.kaggle.com/datasets/kartik2112/fraud-detection 
 
 ---
 
-### Analysis
+### EDA
+
+There will not be any data cleaning for this dataset as the information contained within is perfect thus, I will jump to EDA. The data is hugely imbalanced. For every 1,000 credit card transactions less than 4 are fraud, I will consider utilising SMOTE and turning on class weights in the machine learning algorithms. 
+
+The main task of EDA will be to determine if the feature should be kept or dropped. If the feature is kept, the next step would be to determine if it should remain as numerical or categorical. For categorical columns, I will refer to the internet for the definition of how to segregate the feature.
+
+---
+
+### Feature Engineering
 
 For my analysis, I utilise Random Forest and Logistic Regression as the machine learning models for the classification between the 2 subreddits.
 
@@ -44,6 +39,6 @@ Having said that, for classification problem, accuracy is not the only metrics t
 
 ---
 
-### Conclusion and Recommendation
+#### Hyparameter tuning
 
-In conclusion, logistic regression model on TFIDF Vectorized data gives the highest accuracy however its’s generalization score can be improved upon. These can be done but not limited to increasing sample size, utilising other classification machine learning models, using ensemble methods (Stacking, Bagging (I did bagging but it took 1 hour and not completed)) and raising the K value during cross validation.
+In conclusion, logistic regression model on TFIDF Vectorized data gives the highest accuracy however itsï¿½s generalization score can be improved upon. These can be done but not limited to increasing sample size, utilising other classification machine learning models, using ensemble methods (Stacking, Bagging (I did bagging but it took 1 hour and not completed)) and raising the K value during cross validation.
