@@ -26,19 +26,18 @@ The main task of EDA will be to determine if the feature should be kept or dropp
 
 ### Feature Engineering
 
-For my analysis, I utilise Random Forest and Logistic Regression as the machine learning models for the classification between the 2 subreddits.
+The main task of feature engineering is to determine if the column should be dropped or kept and the only factor in determining that is to observe if there is any relationship between that feature and the target label. Once the decision has been made, the task was to determine if a numerical feature is to remain numerical or be converted to categorical. This was done by analysing whether there is a correlation between the magnitude of the said feature and the target label. Magnitude of features with a zero or low correlation with the target label were converted to categorical columns.
 
-However, in terms of feature engineering, I utilised both TFIDF vectorizer and Count Vectorizer. My rationale was that since I am only utilising 2 models, I should make up for it by increasing the ways I engage in feature engineering.
+With the above tasks completed, the next step is to investigate multicollinearity. There are multiple ways to investigate this issue and my statistical technique of choice is variance inflation factor (VIF). Thankfully there was low/no presence of multicollinearity with all the VIF scores below 5.
 
-Once model training, hyperparameter tuning and model evaluation was done.
-I noticed that logistic regression does better on accuracy relative to Random Forest. However, while it does well in accuracy there is a trade-off. Its generalization score is above the 5% acceptance range.
-
-In this project, I had to compromise my generalization score to achieve better accuracy.
-
-Having said that, for classification problem, accuracy is not the only metrics to measure the effectiveness of a machine learning algorithm. Precision and recall are the other measures of a model. Since, I have a balanced dataset, I will use accuracy as the main metric, precision and recall as the secondary measures.
+At the end all the features bar one was categorical, one feature was numerical. I chose to model on two data sets, one normalized with standard scaler and the other normalized with min max scaler.
 
 ---
 
 #### Hyparameter tuning
 
-In conclusion, logistic regression model on TFIDF Vectorized data gives the highest accuracy however its�s generalization score can be improved upon. These can be done but not limited to increasing sample size, utilising other classification machine learning models, using ensemble methods (Stacking, Bagging (I did bagging but it took 1 hour and not completed)) and raising the K value during cross validation.
+While forming the idea of my capstone project, I have decided to utilise 4 models. They are logistic regression, random forest, LightGBM and last but not least, utilising the best hyperparameters from each model, stacking.
+
+Utilising ROC, PR curves and more, model performance was evident. LightGBM did the best in recall scores on both train and test data. In addition, generalisation score was also fulfilled. This was followed closely by Random Forest model. Logistic Regression fared the worst against the above said models. Stacking was pulled down by the Logistic Regression model. Therefore, my model of choice is LightGBM performed on data normalized with Standard Scaler.
+
+### Conclusion and Recommendation
