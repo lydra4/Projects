@@ -2,11 +2,11 @@
 
 ### Overview
 
-This is my last project, I will be taking on the role of the data science team in the largest bank in Singapore, DBS.
+This is my last project at General Assembly, I will be taking on the role of the data science team at the largest bank in Singapore, DBS.
 
 ### Problem Statement
 
-The COVID19 Pandemic has accelerated e-commerce usage, this is has led to a rise in Credit Card Transactions. An increase in Credit Card transactions would cause more fraud transactions being committed. Therefore, the data science team would like to come up with an improved machine learning algorithm to detect fraud.
+The COVID19 Pandemic has accelerated e-commerce usage, this has led to a rise in Credit Card Transactions. An increase in Credit Card transactions would lead to more fraud transactions being committed. Therefore, the data science team would like to come up with an improved machine learning algorithm to detect fraud.
 
 ### Datasets
 
@@ -20,7 +20,7 @@ https://www.kaggle.com/datasets/kartik2112/fraud-detection
 
 There will not be any data cleaning for this dataset as the information contained within is perfect thus, I will jump to EDA. The data is hugely imbalanced. For every 1,000 credit card transactions less than 4 are fraud, I will consider utilising SMOTE and turning on class weights in the machine learning algorithms. 
 
-The main task of EDA will be to determine if the feature should be kept or dropped. If the feature is kept, the next step would be to determine if it should remain as numerical or categorical. For categorical columns, I will refer to the internet for the definition of how to segregate the feature.
+The main task of EDA will be to determine if the feature should be kept or dropped. If the feature is kept, the next step would be to determine if it is numerical or categorical. For categorical columns, I will refer to the internet for the definition of how to segregate the feature.
 
 ---
 
