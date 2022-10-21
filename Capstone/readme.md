@@ -40,4 +40,7 @@ While forming the idea of my capstone project, I have decided to utilise 4 model
 
 Utilising ROC, PR curves and more, model performance was evident. LightGBM did the best in recall scores on both train and test data. In addition, generalisation score was also fulfilled. This was followed closely by Random Forest model. Logistic Regression fared the worst against the above said models. Stacking was pulled down by the Logistic Regression model. Therefore, my model of choice is LightGBM performed on data normalized with Standard Scaler.
 
+---
+
 ### Conclusion and Recommendation
+LightGBM does the best among the other models in terms of recall score on test data. This is followed by Random Forest however this model does not satisfy the generalisation score of 5%. Logistic Regression and Stacking fared badly when compared to the 2 said models. The performance of Logistic Regression pulls down the scores of Stacking. LightGBM trained on data normalized with standard scaler is my model of choice. 
